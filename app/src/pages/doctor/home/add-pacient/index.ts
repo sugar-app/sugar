@@ -2,6 +2,8 @@ import { NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
 
 import { Pacient } from '../../../../interfaces/pacient';
+import { Gender } from '../../../../interfaces/gender';
+import { DiabetesType } from '../../../../interfaces/diabetesType';
 
 @Component({
   selector: 'add-pacient',
@@ -21,7 +23,7 @@ export class AddPacientPage {
 
   }
 
-  registerPacient() {
+  goToInsulinType() {
     console.log(this.pacient);
   }
 

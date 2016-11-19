@@ -1,5 +1,5 @@
 <h1>Add pacient</h1>
-<form (ngSubmit)="registerPacient()">
+<form (ngSubmit)="goToInsulinType()">
   <ion-item>
     <ion-label>First name</ion-label>
     <ion-input type="text" [(ngModel)]="pacient.firstName" name="firstname"></ion-input>
@@ -12,5 +12,24 @@
     <ion-label>Birth date</ion-label>
     <ion-datetime displayFormat="D/M/YY" pickerFormat="D MMMM YYYY" [(ngModel)]="pacient.birthDate" name="birthdate"></ion-datetime>
   </ion-item>
-  <button ion-button type="submit" block>Submit</button>
+  <ion-item>
+    <ion-label>Gender</ion-label>
+    <ion-select [(ngModel)]="pacient.gender" name="gender">
+      <ion-option value="1">Male</ion-option>
+      <ion-option value="2">Female</ion-option>
+      <ion-option value="3">Other</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Diagnostic date</ion-label>
+    <ion-datetime displayFormat="D/M/YY" pickerFormat="D MMMM YYYY" [(ngModel)]="pacient.diagnosticDate" name="diagnosticdate"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Diabetes type</ion-label>
+    <ion-select [(ngModel)]="pacient.diabetesType" name="diabetestype">
+      <ion-option value="1">Type 1</ion-option>
+      <ion-option value="2">Type 2</ion-option>
+    </ion-select>
+  </ion-item>
+  <button ion-button type="submit" block>Next</button>
 </form>

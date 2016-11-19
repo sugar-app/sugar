@@ -8,6 +8,7 @@ import { LoginPage } from '../pages/login';
 import { DoctorPage } from '../pages/doctor';
 import { ChildPage } from '../pages/doctor/about/child';
 import { AddPacientPage } from '../pages/doctor/home/add-pacient';
+import { PacientService } from '../services/pacient';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,8 @@ import { AddPacientPage } from '../pages/doctor/home/add-pacient';
     ChildPage,
     AddPacientPage
   ],
-  providers: []
+  providers: [
+    PacientService,
+  ]
 })
 export class AppModule {}
