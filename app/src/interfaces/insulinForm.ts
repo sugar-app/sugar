@@ -1,4 +1,4 @@
 export enum InsulinForm {
-  analog,
-  human
+  analog = 1,
+  human = 2
 }
