@@ -1,1 +1,11 @@
-  <h1>Add pacient</h1>
+<h1>Add pacient</h1>
+<form (ngSubmit)="registerPacient()">
+  <ion-item>
+    <ion-label>First name</ion-label>
+    <ion-input type="text" [(ngModel)]="pacient.firstName" name="firstname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Last name</ion-label>
+    <ion-input type="text" [(ngModel)]="pacient.lastName" name="lastname"></ion-input>
+  </ion-item>
+</form>
