@@ -15,7 +15,6 @@ export class LoginPage {
   }
 
   goToDoctor() {
-    this.navCtrl.push(DoctorPage);
+    this.navCtrl.setRoot(DoctorPage);
   }
-
 }
