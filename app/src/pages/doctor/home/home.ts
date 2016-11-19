@@ -16,10 +16,12 @@ export class HomePage {
     this.items = [
        {
          id : 1,
-        firstName: 'Gigel',
+         firstName: 'Gigel',
          lastName: 'dotCom',
-         sex : Gender.Male
+         sex : Gender.Male,
+         birthDate : new Date(),
+         diagnosticDate : new Date()
       }
-    ]
+    ];
   }
 }
