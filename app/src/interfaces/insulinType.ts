@@ -1,4 +1,5 @@
 import {InsulinForm} from './insulinForm';
+import {InsulinAction} from './InsulinAction'
 
 export interface InsulinType {
   genericName : string;
@@ -9,4 +10,5 @@ export interface InsulinType {
   onset : number;
   peak : number;
   duration : number;
+  action: InsulinAction;
 }

@@ -13,7 +13,7 @@ export class AddPacientPage {
   public pacient: Pacient = {
     firstName: '',
     lastName: '',
-    birthDate: undefined,
+    birthDay: undefined,
     gender: undefined,
     diagnosticDate: undefined,
     diabetesType: undefined
