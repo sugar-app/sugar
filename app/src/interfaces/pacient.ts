@@ -6,7 +6,7 @@ export interface Pacient {
   id? : number;
   firstName : string;
   lastName : string;
-  birthDate : Date;
+  birthDay : Date;
   gender : Gender;
   diagnosticDate: Date;
   diabetesType : DiabetesType;

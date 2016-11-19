@@ -3,12 +3,11 @@
     <ion-title>Pacients</ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  <ion-list [virtualScroll]="items">
-      <button ion-item *virtualItem="let item" icon-left>
-        <ion-icon [name]="item.gender | gendericon" item-left></ion-icon>
-        {{ item.firstName }} {{ item.lastName }}
+<ion-content>
+  <ion-list [virtualScroll]="pacients | async">
+      <button ion-item *virtualItem="let pacient" icon-left>
+        <ion-icon [name]="pacient.gender | gendericon" item-left></ion-icon>
+        {{ pacient.firstName }} {{ pacient.lastName }}
       </button>
   </ion-list>
 </ion-content>
