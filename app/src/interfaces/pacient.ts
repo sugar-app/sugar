@@ -4,6 +4,8 @@ export interface Pacient {
   id : number;
   firstName : string;
   lastName : string;
-  age : number;
+  birthDate : Date;
   sex : Gender;
+  diagnosticDate: Date;
+
 }
