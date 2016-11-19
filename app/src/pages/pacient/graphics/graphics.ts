@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'graphics',
-  template: 'Graphics'
+  templateUrl: 'graphics.html'
 })
 export class GraphicsPage {
   constructor(public navCtrl: NavController) {
