@@ -6,6 +6,8 @@ import { Pacient } from '../../../interfaces/pacient';
 import {Observable} from "rxjs";
 import {PacientService} from "../../../services/pacient";
 
+import { AddPacientPage } from './add-pacient';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -15,5 +17,9 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, private pacientService: PacientService) {
     this.pacients = pacientService.getPacients();
+  }
+
+  goToAddPacient() {
+    this.navCtrl.push(AddPacientPage);
   }
 }
