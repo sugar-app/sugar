@@ -7,6 +7,7 @@ import { HomePage } from '../pages/doctor/home/home';
 import { LoginPage } from '../pages/login';
 import { DoctorPage } from '../pages/doctor';
 import { ChildPage } from '../pages/doctor/about/child';
+import {GenderIconPipe} from "../pipes/genderIconPipe";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ChildPage } from '../pages/doctor/about/child';
     HomePage,
     LoginPage,
     DoctorPage,
-    ChildPage
+    ChildPage,
+    GenderIconPipe
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -31,6 +33,6 @@ import { ChildPage } from '../pages/doctor/about/child';
     DoctorPage,
     ChildPage
   ],
-  providers: []
+  providers: [  ]
 })
 export class AppModule {}
