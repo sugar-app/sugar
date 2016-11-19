@@ -1,5 +1,4 @@
 import {InsulinType} from "./insulinType";
-import {DailyMeal} from "./dailyMeal";
 
 export interface PacientMedicalInfo {
   patient_id : number;
@@ -9,6 +8,6 @@ export interface PacientMedicalInfo {
   weight? : number | null | undefined;
   height? : number | null | undefined;
   hemoglobinA1C? : number | null | undefined;
-  tamponRates : {[key: DailyMeal]: number} | null | undefined;
-  correctionRates : {[key: DailyMeal]: number} | null | undefined;
+  tamponRates : {[key: number]: number} | null | undefined;
+  correctionRates : {[key: number]: number} | null | undefined;
 }
