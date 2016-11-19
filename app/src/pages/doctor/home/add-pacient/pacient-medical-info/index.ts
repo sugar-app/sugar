@@ -15,15 +15,20 @@ export class MedicalInfoPage {
     basalInsulinType: undefined,
     bolusInsulinType: undefined,
     recommendedDailyCarbohydrates: undefined,
-    weight: 0,
-    height: 0,
-    hemoglobinA1C: 0,
+    weight: undefined,
+    height: undefined,
+    hemoglobinA1C: undefined,
     tamponRates: undefined,
     correctionRates: undefined
   };
 
-  private pacientInfo: Pacient;
-  private basalInsulinTypes = [
+  public pacientInfo: Pacient;
+
+  public basalInsulinTypes = [
+    {id: 0, genericName: 'Gigi'},
+    {id: 1, genericName: 'Bularca'}
+  ];
+  public bolusInsulinTypes = [
     {id: 0, genericName: 'Gigi'},
     {id: 1, genericName: 'Bularca'}
   ];
