@@ -7,7 +7,8 @@
   <ion-list [virtualScroll]="pacients | async">
       <button ion-item *virtualItem="let pacient" icon-left>
         <ion-icon [name]="pacient.gender | gendericon" item-left></ion-icon>
-        {{ pacient.firstName }} {{ pacient.lastName }}
+        <h1>{{ pacient.firstName }} {{ pacient.lastName }}</h1>
+        <h2>Type {{ pacient.diabetesType }}</h2>
       </button>
   </ion-list>
   <button ion-button (click)="goToAddPacient()">Add pacient</button>
