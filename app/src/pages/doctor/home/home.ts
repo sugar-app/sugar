@@ -22,7 +22,8 @@ export class HomePage {
          gender : Gender.Male,
          birthDate : new Date(),
          diagnosticDate : new Date(),
-         diabetesType : DiabetesType.Type1
+         diabetesType : DiabetesType.Type1,
+         medicalInfo : null
       }
     ];
   }
