@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'my-info',
-  template: 'Pacient info'
+  templateUrl: 'info.html'
 })
 export class MyInfo {
   constructor(public navCtrl: NavController) {
