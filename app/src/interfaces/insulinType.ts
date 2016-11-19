@@ -1,5 +1,5 @@
 import {InsulinForm} from './insulinForm';
-import {InsulinAction} from './InsulinAction'
+import {InsulinAction} from './insulinAction'
 
 export interface InsulinType {
   genericName : string;
