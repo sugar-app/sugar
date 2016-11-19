@@ -9,7 +9,6 @@ import { DoctorPage } from '../pages/doctor';
 import { ChildPage } from '../pages/doctor/about/child';
 import { AddPacientPage } from '../pages/doctor/home/add-pacient';
 import {GenderIconPipe} from "../pipes/genderIconPipe";
-import {GenderIconPipe} from "../pipes/genderIconPipe";
 import { PacientService } from '../services/pacient';
 
 @NgModule({
@@ -21,7 +20,7 @@ import { PacientService } from '../services/pacient';
     LoginPage,
     DoctorPage,
     ChildPage,
-    AddPacientPage
+    AddPacientPage,
     GenderIconPipe
   ],
   imports: [
