@@ -18,7 +18,7 @@ export class HomePage {
          id : 1,
         firstName: 'Gigel',
          lastName: 'dotCom',
-         sex : Gender.Male,
+         sex : Gender.Male
       }
     ]
   }
