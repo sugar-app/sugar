@@ -8,10 +8,21 @@ import { Pacient } from '../../../../interfaces/pacient';
   templateUrl: 'add-pacient.html'
 })
 export class AddPacientPage {
-  public pacient: Pacient;
+  public pacient: Pacient = {
+    firstName: '',
+    lastName: '',
+    birthDate: undefined,
+    gender: undefined,
+    diagnosticDate: undefined,
+    diabetesType: undefined
+  };
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  registerPacient() {
+    console.log(this.pacient);
   }
 
 }

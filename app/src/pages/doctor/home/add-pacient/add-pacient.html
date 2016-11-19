@@ -8,4 +8,9 @@
     <ion-label>Last name</ion-label>
     <ion-input type="text" [(ngModel)]="pacient.lastName" name="lastname"></ion-input>
   </ion-item>
+  <ion-item>
+    <ion-label>Birth date</ion-label>
+    <ion-datetime displayFormat="D/M/YY" pickerFormat="D MMMM YYYY" [(ngModel)]="pacient.birthDate" name="birthdate"></ion-datetime>
+  </ion-item>
+  <button ion-button type="submit" block>Submit</button>
 </form>
