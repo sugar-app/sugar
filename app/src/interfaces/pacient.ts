@@ -1,11 +1,13 @@
 import {Gender} from './gender'
+import {DiabetesType} from './diabetesType';
 
 export interface Pacient {
-  id : number;
+  id? : number;
   firstName : string;
   lastName : string;
   birthDate : Date;
-  sex : Gender;
+  gender : Gender;
   diagnosticDate: Date;
-
+  diabetesType : DiabetesType;
 }
+

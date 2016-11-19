@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 
 import { Pacient } from '../../../interfaces/pacient';
 import { Gender } from '../../../interfaces/gender';
+import {DiabetesType} from '../../../interfaces/diabetesType';
 
 @Component({
   selector: 'page-home',
@@ -18,9 +19,10 @@ export class HomePage {
          id : 1,
          firstName: 'Gigel',
          lastName: 'dotCom',
-         sex : Gender.Male,
+         gender : Gender.Male,
          birthDate : new Date(),
-         diagnosticDate : new Date()
+         diagnosticDate : new Date(),
+         diabetesType : DiabetesType.Type1
       }
     ];
   }
