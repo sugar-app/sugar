@@ -1,5 +1,5 @@
 import {InsulinType} from "./insulinType";
-import {TamponRate} from "./tamponRate";
+import {DailyMeal} from "./dailyMeal";
 
 export interface PacientMedicalInfo{
   insulinType? : InsulinType;
@@ -7,5 +7,6 @@ export interface PacientMedicalInfo{
   weight? : number;
   height? : number;
   hemoglobinA1C? : number;
-  tamponRates : TamponRate[];
+  tamponRates : Map<DailyMeal, number>;
+  correctionRates : Map<DailyMeal, number>;
 }
