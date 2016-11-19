@@ -1,17 +1,18 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Pacients</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-list-header>
-      Patients
-    </ion-list-header>
-    <button ion-item *ngFor="let item of items">
-      {{ item.firstName }}
-    </button>
+  <ion-list [virtualScroll]="items">
+      <button ion-item *virtualItem="let item" icon-left>
+        <ion-icon [name]="item.gender | gendericon" item-left></ion-icon>
+        {{ item.firstName }} {{ item.lastName }}
+      </button>
   </ion-list>
+<<<<<<< HEAD
   <button (click)="goToAddPacient()">Add pacient</button>
+=======
+>>>>>>> ce04ff20df79e70df834bb4ba8a88241f59bb8d9
 </ion-content>

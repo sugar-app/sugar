@@ -7,7 +7,11 @@ import { HomePage } from '../pages/doctor/home/home';
 import { LoginPage } from '../pages/login';
 import { DoctorPage } from '../pages/doctor';
 import { ChildPage } from '../pages/doctor/about/child';
+<<<<<<< HEAD
 import { AddPacientPage } from '../pages/doctor/home/add-pacient';
+=======
+import {GenderIconPipe} from "../pipes/genderIconPipe";
+>>>>>>> ce04ff20df79e70df834bb4ba8a88241f59bb8d9
 import { PacientService } from '../services/pacient';
 
 @NgModule({
@@ -19,7 +23,11 @@ import { PacientService } from '../services/pacient';
     LoginPage,
     DoctorPage,
     ChildPage,
+<<<<<<< HEAD
     AddPacientPage
+=======
+    GenderIconPipe
+>>>>>>> ce04ff20df79e70df834bb4ba8a88241f59bb8d9
   ],
   imports: [
     IonicModule.forRoot(MyApp)
