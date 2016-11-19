@@ -1,0 +1,7 @@
+before_install: cd server
+language: node_js
+node_js:
+  - "6"
+
+notifications:
+  slack: sugar-app:bfUi2wc3JXbTySc5M9GExyzo
