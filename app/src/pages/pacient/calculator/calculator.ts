@@ -13,7 +13,7 @@ import {Pacient} from '../../../interfaces/pacient'
 export class CalculatorPage {
   private calculatorInput : CalculatorInput;
 
-  constructor(public navCtrl: NavController, public calculatorService: CalculatorService , public pacient : Pacient) {
+  constructor(public navCtrl: NavController, public calculatorService: CalculatorService) {
     this.calculatorInput = {
       dailyMeal : 1,
       bloodGlucoseLevel : 120,
