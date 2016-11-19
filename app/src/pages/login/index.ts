@@ -20,6 +20,6 @@ export class LoginPage {
   }
 
   goToPacient() {
-    this.navCtrl.setRoot(PacientPage);
+    this.navCtrl.setRoot(PacientPage, {pacientId: 15});
   }
 }

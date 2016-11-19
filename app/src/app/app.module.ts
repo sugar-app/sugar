@@ -15,6 +15,8 @@ import {PacientPage} from '../pages/pacient';
 import {MyInfoPage} from '../pages/pacient/info/info';
 import {GraphicsPage} from '../pages/pacient/graphics/graphics';
 import {CalculatorPage} from '../pages/pacient/calculator/calculator';
+import {CalculatorService} from '../services/calculator';
+import {BloodGlucoseLevelColorPipe} from '../pipes/bloodGlucoseLevelColorPipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import {CalculatorPage} from '../pages/pacient/calculator/calculator';
     ChildPage,
     AddPacientPage,
     GenderIconPipe,
+    BloodGlucoseLevelColorPipe,
     MedicalInfoPage,
     PacientPage,
     MyInfoPage,
@@ -54,6 +57,7 @@ import {CalculatorPage} from '../pages/pacient/calculator/calculator';
   ],
   providers: [
     PacientService,
+    CalculatorService,
   ]
 })
 export class AppModule {}
