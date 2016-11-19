@@ -11,6 +11,10 @@ import { AddPacientPage } from '../pages/doctor/home/add-pacient';
 import {GenderIconPipe} from "../pipes/genderIconPipe";
 import { PacientService } from '../services/pacient';
 import { MedicalInfoPage } from '../pages/doctor/home/add-pacient/pacient-medical-info';
+import {PacientPage} from '../pages/pacient';
+import {MyInfo} from '../pages/pacient/info';
+import {Graphics} from '../pages/pacient/graphics';
+import {Calculator} from '../pages/pacient/calculator';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { MedicalInfoPage } from '../pages/doctor/home/add-pacient/pacient-medica
     ChildPage,
     AddPacientPage,
     GenderIconPipe,
-    MedicalInfoPage
+    MedicalInfoPage,
+    PacientPage,
+    MyInfo,
+    Graphics,
+    Calculator
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -38,7 +46,11 @@ import { MedicalInfoPage } from '../pages/doctor/home/add-pacient/pacient-medica
     DoctorPage,
     ChildPage,
     AddPacientPage,
-    MedicalInfoPage
+    MedicalInfoPage,
+    PacientPage,
+    MyInfo,
+    Graphics,
+    Calculator
   ],
   providers: [
     PacientService,
