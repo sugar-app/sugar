@@ -12,9 +12,9 @@ import {GenderIconPipe} from "../pipes/genderIconPipe";
 import { PacientService } from '../services/pacient';
 import { MedicalInfoPage } from '../pages/doctor/home/add-pacient/pacient-medical-info';
 import {PacientPage} from '../pages/pacient';
-import {MyInfo} from '../pages/pacient/info';
-import {Graphics} from '../pages/pacient/graphics';
-import {Calculator} from '../pages/pacient/calculator';
+import {MyInfo} from '../pages/pacient/info/info';
+import {Graphics} from '../pages/pacient/graphics/graphics';
+import {Calculator} from '../pages/pacient/calculator/calculator';
 
 @NgModule({
   declarations: [
