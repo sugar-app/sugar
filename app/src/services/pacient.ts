@@ -16,6 +16,36 @@ export class PacientService {
         let body = res.json();
         return body || [];
       })
+      .map((data) => {
+        data.medicalInfo = {
+          recommendedDailyCarbohydrates: 123,
+          weight: 90,
+          height: 180,
+          hemoglobinA1C: 123,
+          tamponRates: {
+            1: 123,
+            2: 123,
+            3: 123
+          },
+          correctionRates: {
+            1: 123,
+            2: 123,
+            3: 123
+          },
+          insulinType: {
+            genericName: 'asd',
+            brandName: 'dsa',
+            manufacturer: 'asd',
+            form: 1,
+            delivery: 'shot',
+            onset: 5,
+            peak: 10,
+            duration: 123
+          }
+        }
+
+        return data;
+      });
       .catch((error: Response | any) => {
         console.log(error);
         let errMsg: string;

@@ -2,6 +2,7 @@ import {InsulinForm} from './insulinForm';
 import {InsulinAction} from './insulinAction'
 
 export interface InsulinType {
+  id : number;
   genericName : string;
   brandName : string;
   manufacturer : string;

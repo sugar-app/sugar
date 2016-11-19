@@ -10,7 +10,6 @@ export interface Pacient {
   gender : Gender;
   diagnosticDate: Date;
   diabetesType : DiabetesType;
-
   medicalInfo? : PacientMedicalInfo | null | undefined;
 }
 
