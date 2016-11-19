@@ -6,7 +6,7 @@ import { NavController } from 'ionic-angular';
   selector: 'graphics',
   template: 'Graphics'
 })
-export class Graphics {
+export class GraphicsPage {
   constructor(public navCtrl: NavController) {
   }
 }

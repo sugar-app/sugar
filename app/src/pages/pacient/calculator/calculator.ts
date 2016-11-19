@@ -6,7 +6,7 @@ import { NavController } from 'ionic-angular';
   selector: 'calculator',
   template: 'Calculator'
 })
-export class Calculator {
+export class CalculatorPage {
   constructor(public navCtrl: NavController) {
   }
 }
