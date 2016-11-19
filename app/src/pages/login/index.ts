@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 
-import {DoctorPage} from '../doctor';
+import {HomePage} from '../doctor/home/home';
 
 @Component({
   selector: 'login',
@@ -15,6 +15,6 @@ export class LoginPage {
   }
 
   goToDoctor() {
-    this.navCtrl.setRoot(DoctorPage);
+    this.navCtrl.setRoot(HomePage);
   }
 }

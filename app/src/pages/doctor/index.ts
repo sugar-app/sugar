@@ -10,7 +10,7 @@ import { ContactPage } from './contact/contact';
 export class DoctorPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  tab1Root: any = HomePage;
+  root: any = HomePage;
   tab2Root: any = AboutPage;
   tab3Root: any = ContactPage;
 

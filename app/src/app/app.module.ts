@@ -10,6 +10,7 @@ import { ChildPage } from '../pages/doctor/about/child';
 import { AddPacientPage } from '../pages/doctor/home/add-pacient';
 import {GenderIconPipe} from "../pipes/genderIconPipe";
 import { PacientService } from '../services/pacient';
+import { MedicalInfoPage } from '../pages/doctor/home/add-pacient/pacient-medical-info';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PacientService } from '../services/pacient';
     DoctorPage,
     ChildPage,
     AddPacientPage,
-    GenderIconPipe
+    GenderIconPipe,
+    MedicalInfoPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -35,7 +37,8 @@ import { PacientService } from '../services/pacient';
     LoginPage,
     DoctorPage,
     ChildPage,
-    AddPacientPage
+    AddPacientPage,
+    MedicalInfoPage
   ],
   providers: [
     PacientService,

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Medical info</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="savePacient()">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<h1>Add pacient</h1>
+<form (ngSubmit)="savePacient()">
+  <ion-item>
+    <ion-label>Basal insulin type</ion-label>
+    <ion-select [(ngModel)]="basalInsulinType" [selectOptions]="basalInsulinTypes" name="basalinsulintype">
+      <ion-option *ngFor="let insulin of basalInsulinTypes" [value]="insulin.id">{{insulin.genericName}}</ion-option>
+    </ion-select>
+  </ion-item>
+</form>
