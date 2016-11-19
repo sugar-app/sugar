@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
+var cors = require('cors');
 
 var pacientRoutes = require('./routes/pacient');
 
@@ -9,6 +10,7 @@ var port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(morgan('combined'));
+app.use(cors());
 
 app.get('/', function (req, res) {
   res.send('Hello World')
