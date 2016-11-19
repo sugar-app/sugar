@@ -45,7 +45,7 @@ export class PacientService {
         }
 
         return data;
-      });
+      })
       .catch((error: Response | any) => {
         console.log(error);
         let errMsg: string;
