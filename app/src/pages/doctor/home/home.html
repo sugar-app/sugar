@@ -1,6 +1,11 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Pacients</ion-title>
+    <ion-buttons end>
+      <button (click)="goToAddPacient()">
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content>
@@ -11,5 +16,4 @@
         <h2>Type {{ pacient.diabetesType }}</h2>
       </button>
   </ion-list>
-  <button ion-button (click)="goToAddPacient()">Add pacient</button>
 </ion-content>
