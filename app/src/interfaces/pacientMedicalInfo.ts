@@ -1,12 +1,12 @@
 import {InsulinType} from "./insulinType";
 import {DailyMeal} from "./dailyMeal";
 
-export interface PacientMedicalInfo{
-  insulinType? : InsulinType;
-  recommendedDailyCarbohydrates? : number;
-  weight? : number;
-  height? : number;
-  hemoglobinA1C? : number;
-  tamponRates : Map<DailyMeal, number>;
-  correctionRates : Map<DailyMeal, number>;
+export interface PacientMedicalInfo {
+  insulinType? : InsulinType | null | undefined;
+  recommendedDailyCarbohydrates? : number | null | undefined;
+  weight? : number | null | undefined;
+  height? : number | null | undefined;
+  hemoglobinA1C? : number | null | undefined;
+  tamponRates : Map<DailyMeal, number> | null | undefined;
+  correctionRates : Map<DailyMeal, number> | null | undefined;
 }
