@@ -8,6 +8,7 @@ import { LoginPage } from '../pages/login';
 import { DoctorPage } from '../pages/doctor';
 import { ChildPage } from '../pages/doctor/about/child';
 import {GenderIconPipe} from "../pipes/genderIconPipe";
+import { PacientService } from '../services/pacient';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,8 @@ import {GenderIconPipe} from "../pipes/genderIconPipe";
     DoctorPage,
     ChildPage
   ],
-  providers: [  ]
+  providers: [
+    PacientService,
+  ]
 })
 export class AppModule {}
