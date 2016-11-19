@@ -7,6 +7,7 @@ import { HomePage } from '../pages/doctor/home/home';
 import { LoginPage } from '../pages/login';
 import { DoctorPage } from '../pages/doctor';
 import { ChildPage } from '../pages/doctor/about/child';
+import { AddPacientPage } from '../pages/doctor/home/add-pacient';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ChildPage } from '../pages/doctor/about/child';
     HomePage,
     LoginPage,
     DoctorPage,
-    ChildPage
+    ChildPage,
+    AddPacientPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -29,7 +31,8 @@ import { ChildPage } from '../pages/doctor/about/child';
     HomePage,
     LoginPage,
     DoctorPage,
-    ChildPage
+    ChildPage,
+    AddPacientPage
   ],
   providers: []
 })

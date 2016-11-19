@@ -5,6 +5,8 @@ import { NavController } from 'ionic-angular';
 import { Pacient } from '../../../interfaces/pacient';
 import { Gender } from '../../../interfaces/gender';
 
+import { AddPacientPage } from './add-pacient';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -23,5 +25,9 @@ export class HomePage {
          diagnosticDate : new Date()
       }
     ];
+  }
+
+  goToAddPacient() {
+    this.navCtrl.push(AddPacientPage);
   }
 }
