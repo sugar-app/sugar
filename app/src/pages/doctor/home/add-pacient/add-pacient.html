@@ -1,3 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add pacient</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="goToInsulinType()">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
 <h1>Add pacient</h1>
 <form (ngSubmit)="goToInsulinType()">
   <ion-item>
@@ -31,5 +41,4 @@
       <ion-option value="2">Type 2</ion-option>
     </ion-select>
   </ion-item>
-  <button ion-button type="submit" block>Next</button>
 </form>
