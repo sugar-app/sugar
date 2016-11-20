@@ -40,7 +40,10 @@ import { UserLoginModal } from '../modals/user-login';
     UserLoginModal,
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+			backButtonText: 'Back',
+			iconMode: 'ios'
+		}),
     ChartModule,
   ],
   bootstrap: [IonicApp],

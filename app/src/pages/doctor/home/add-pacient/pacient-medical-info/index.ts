@@ -42,16 +42,23 @@ export class MedicalInfoPage {
     {id: 6, genericName: 'Lispro'},
     {id: 7, genericName: 'Aspart'}
   ];
+  loadingCtrl: LoadingController;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public pacientService: PacientService, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pacientService: PacientService, loadingCtrl: LoadingController) {
     this.pacientInfo = navParams.get('pacientInfo');
+    this.loadingCtrl = loadingCtrl;
   }
 
   savePacient() {
+    var loader = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+    loader.present();
     this.pacientInfo.medicalInfo = this.medicalInfo;
     this.pacientService.createPacient(this.pacientInfo).subscribe((pacient) => {
 			console.log(pacient);
 			this.navCtrl.push(PacientPage, {pacientId: pacient.id});
+      loader.dismiss();
 		});
   }
 
