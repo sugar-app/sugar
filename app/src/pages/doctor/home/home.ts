@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 
 import { Pacient } from '../../../interfaces/pacient';
 import {Observable} from "rxjs";
@@ -17,8 +17,15 @@ import { PacientPage } from '../../pacient';
 export class HomePage {
   pacients: Observable<Pacient[]>;
 
-  constructor(public navCtrl: NavController, private pacientService: PacientService) {
+  constructor(public navCtrl: NavController, private pacientService: PacientService, loading: LoadingController) {
     this.pacients = pacientService.getPacients();
+    let loader = loading.create({
+      content: 'Please wait...',
+    });
+    loader.present();
+    this.pacients.subscribe(() => {
+      loader.dismiss();
+    });
   }
 
   goToAddPacient() {
