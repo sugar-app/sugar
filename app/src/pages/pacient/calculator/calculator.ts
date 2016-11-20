@@ -12,6 +12,8 @@ import {Pacient} from '../../../interfaces/pacient'
 })
 export class CalculatorPage {
   public calculatorInput : CalculatorInput;
+  public loaded: boolean = false;
+  public total: number;
 
   public pacient: Pacient = {
         firstName: '',
@@ -25,6 +27,12 @@ export class CalculatorPage {
           correctionRates: {}
         },
     };
+
+  public calcOut: CalculatorOutput = {
+    carbohydratesUnits: undefined,
+    correctionUnits: undefined,
+    kCalUnits: undefined
+  };
 
   constructor(public navCtrl: NavController, public calculatorService: CalculatorService,public params: NavParams) {
     params.data.subscribe((pacient) => {
@@ -45,6 +53,8 @@ export class CalculatorPage {
  ];
 
  calculateStatistics(){
-  console.log(this.pacient);
+   this.loaded = true;
+   this.calcOut = this.calculatorService.calculate(this.pacient.medicalInfo, this.calculatorInput);
+   this.total = this.calcOut.carbohydratesUnits + this.calcOut.correctionUnits + this.calcOut.kCalUnits;
  }
 }

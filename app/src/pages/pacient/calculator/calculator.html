@@ -30,4 +30,20 @@
             <ion-input type="number" [(ngModel)]="calculatorInput.kilocalories"></ion-input>
         </ion-item>
     </ion-list>
+    <ion-card *ngIf="loaded">
+      <ion-card-header>Carbohydrates units</ion-card-header>
+      <ion-item>{{calcOut.carbohydratesUnits.toFixed(2)}}</ion-item>
+    </ion-card>
+    <ion-card *ngIf="loaded">
+      <ion-card-header>Correction units</ion-card-header>
+      <ion-item>{{calcOut.correctionUnits.toFixed(2)}}</ion-item>
+    </ion-card>
+    <ion-card *ngIf="loaded">
+      <ion-card-header>KCal units</ion-card-header>
+      <ion-item>{{calcOut.kCalUnits.toFixed(2)}}</ion-item>
+    </ion-card>
+    <ion-card *ngIf="loaded">
+      <ion-card-header>Total units</ion-card-header>
+      <ion-item>{{total.toFixed(2)}}</ion-item>
+    </ion-card>
 </ion-content>
