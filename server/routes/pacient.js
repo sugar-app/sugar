@@ -34,7 +34,7 @@ router.post('/', function (req, res) {
   var newPacient = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    birthday: req.body.birthday,
+    birthday: req.body.birthday || req.body.birthDay,
     gender: req.body.gender,
     diagnosticDate: req.body.diagnosticDate,
     diabetesType: req.body.diabetesType
@@ -91,7 +91,7 @@ router.post('/', function (req, res) {
     }
 
     if (req.body.medicalInfo && req.body.medicalInfo.hemoglobinA1C) {
-      var height = new Metric({
+      var hemoglobinA1C = new Metric({
         pacient_id: model.id,
         type: 'hemoglobinA1C',
         value: req.body.medicalInfo.hemoglobinA1C
