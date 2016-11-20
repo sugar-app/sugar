@@ -34,7 +34,7 @@ router.post('/', function (req, res) {
   var newPacient = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    birthday: req.body.birthday,
+    birthday: req.body.birthday || req.body.birthDay,
     gender: req.body.gender,
     diagnosticDate: req.body.diagnosticDate,
     diabetesType: req.body.diabetesType
@@ -42,24 +42,6 @@ router.post('/', function (req, res) {
   var pacient = new Pacient(newPacient);
   pacient.save().then(function (model) {
     var promises = [];
-    if (req.body.medicalInfo && req.body.medicalInfo.basalInsulinType) {
-      var basalInsulinType = new PacientInsulinType({
-        pacient_id: model.id,
-        insulin_type_id: req.body.medicalInfo.basalInsulinType.id
-      });
-
-      promises.push(basalInsulinType.save());
-    }
-
-    if (req.body.medicalInfo && req.body.medicalInfo.bolusInsulinType) {
-      var bolusInsulinType = new PacientInsulinType({
-        pacient_id: model.id,
-        insulin_type_id: req.body.medicalInfo.bolusInsulinType.id
-      });
-
-      promises.push(bolusInsulinType.save());
-    }
-
     if (req.body.medicalInfo && req.body.medicalInfo.recommendedDailyCarbohydrates) {
       var recommendedDailyCarbohydrates = new Metric({
         pacient_id: model.id,
@@ -91,7 +73,7 @@ router.post('/', function (req, res) {
     }
 
     if (req.body.medicalInfo && req.body.medicalInfo.hemoglobinA1C) {
-      var height = new Metric({
+      var hemoglobinA1C = new Metric({
         pacient_id: model.id,
         type: 'hemoglobinA1C',
         value: req.body.medicalInfo.hemoglobinA1C
