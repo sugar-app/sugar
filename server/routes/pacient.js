@@ -24,6 +24,9 @@ router.get('/:id', function (req, res) {
     var response = pacient.attributes;
     response.medicalInfo = pacient.getMedicalInfo();
     res.json(response);
+  }, () => {
+    response.status(404);
+    res.json({errors: ["Pacient not found"]});
   });
 })
 
@@ -134,6 +137,27 @@ router.post('/', function (req, res) {
     res.status(400);
     res.end();
   });
+});
+
+router.post('/:id/metric', function (req, res) {
+  Pacient.where('id', req.params.id).fetch().then((pacient) => {
+    var metric = new Metric({
+      type: req.body.type,
+      pacient_id: pacient.id,
+      value: req.body.value
+    });
+
+    metric.save().then((model) => {
+      res.status(201);
+      res.json(model.attributes);
+    }, () => {
+      res.status(400);
+      res.end();
+    });
+  }, () => {
+    res.status(404);
+    res.json({errors: ["Pacient not found"]});
+  })
 });
 
 module.exports = router;

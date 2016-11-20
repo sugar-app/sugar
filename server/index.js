@@ -4,6 +4,7 @@ var morgan = require('morgan');
 var cors = require('cors');
 
 var pacientRoutes = require('./routes/pacient');
+var insulinRoutes = require('./routes/insulin');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -17,6 +18,7 @@ app.get('/', function (req, res) {
 })
 
 app.use('/pacients', pacientRoutes);
+app.use('/insulin', insulinRoutes);
 
 app.listen(port, function () {
   console.log('Example app listening on port', port)
