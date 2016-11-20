@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 
 import { Pacient } from '../../../interfaces/pacient';
 import { PacientMedicalInfo } from '../../../interfaces/pacientMedicalInfo';
@@ -51,9 +51,14 @@ export class MyInfoPage {
     {id: 0, genericName: 'Gigi'},
     {id: 1, genericName: 'Bularca'}
   ];
-  constructor(public navCtrl: NavController, public params: NavParams) {
+  constructor(public navCtrl: NavController, public params: NavParams, loading: LoadingController) {
+    let loader = loading.create({
+      content: "Please wait..."
+    });
+    loader.present();
     params.data.subscribe((pacient) => {
       this.pacient = pacient;
+      loader.dismiss()
     });
   }
 }
