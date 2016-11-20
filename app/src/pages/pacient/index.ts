@@ -24,5 +24,8 @@ export class PacientPage {
   constructor(public navParams: NavParams, public navCtrl : NavController, public pacientService : PacientService) {
     var pacientId = navParams.get("pacientId");
     this.pacient = pacientService.getPacientsById(pacientId);
+    this.pacient.subscribe((pacient) => {
+      console.log('got pacient', pacient);
+    });
   }
 }

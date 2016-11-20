@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 import { Pacient } from '../../../interfaces/pacient';
 import { PacientMedicalInfo } from '../../../interfaces/pacientMedicalInfo';
@@ -12,12 +12,16 @@ import { InsulinType } from '../../../interfaces/insulinType';
 })
 export class MyInfoPage {
   public pacient: Pacient = {
-      firstName: 'first last',
-      lastName: 'whatever',
+      firstName: '',
+      lastName: '',
       birthDay: new Date(),
       gender: 1,
       diagnosticDate: new Date(),
-      diabetesType: 1
+      diabetesType: 1,
+      medicalInfo: {
+        tamponRates: {},
+        correctionRates: {}
+      },
   };
   public medicalInfo: PacientMedicalInfo = {
     pacient_id: 1,
@@ -47,6 +51,9 @@ export class MyInfoPage {
     {id: 0, genericName: 'Gigi'},
     {id: 1, genericName: 'Bularca'}
   ];
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public params: NavParams) {
+    params.data.subscribe((pacient) => {
+      this.pacient = pacient;
+    });
   }
 }

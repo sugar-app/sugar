@@ -16,36 +16,6 @@ export class PacientService {
         let body = res.json();
         return body || [];
       })
-      .map((data) => {
-        data.medicalInfo = {
-          recommendedDailyCarbohydrates: 123,
-          weight: 90,
-          height: 180,
-          hemoglobinA1C: 123,
-          tamponRates: {
-            1: 123,
-            2: 123,
-            3: 123
-          },
-          correctionRates: {
-            1: 123,
-            2: 123,
-            3: 123
-          },
-          insulinType: {
-            genericName: 'asd',
-            brandName: 'dsa',
-            manufacturer: 'asd',
-            form: 1,
-            delivery: 'shot',
-            onset: 5,
-            peak: 10,
-            duration: 123
-          }
-        }
-
-        return data;
-      })
       .catch((error: Response | any) => {
         console.log(error);
         let errMsg: string;
@@ -63,40 +33,10 @@ export class PacientService {
   }
 
   getPacientsById(id : number): Observable<Pacient> {
-    return this.http.get(this.url)
+    return this.http.get(this.url + '/' + id)
       .map((res: Response) => {
         let body = res.json();
         return body || [];
-      })
-      .map((data) => {
-        data.medicalInfo = {
-          recommendedDailyCarbohydrates: 160,
-          weight: 90,
-          height: 180,
-          hemoglobinA1C: 0.075,
-          tamponRates: {
-            1: 33,
-            2: 21,
-            3: 55
-          },
-          correctionRates: {
-            1: 10,
-            2: 15,
-            3: 20
-          },
-          insulinType: {
-            genericName: 'Bolus',
-            brandName: 'Insulin',
-            manufacturer: 'PastilaDotCom',
-            form: 1,
-            delivery: 'shot',
-            onset: 10,
-            peak: 50,
-            duration: 180
-          }
-        }
-
-        return data;
       })
       .catch((error: Response | any) => {
         console.log(error);

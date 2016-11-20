@@ -17,6 +17,7 @@ import {GraphicsPage} from '../pages/pacient/graphics/graphics';
 import {CalculatorPage} from '../pages/pacient/calculator/calculator';
 import {CalculatorService} from '../services/calculator';
 import {BloodGlucoseLevelColorPipe} from '../pipes/bloodGlucoseLevelColorPipe';
+import { UserLoginModal } from '../modals/user-login';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {BloodGlucoseLevelColorPipe} from '../pipes/bloodGlucoseLevelColorPipe';
     PacientPage,
     MyInfoPage,
     GraphicsPage,
-    CalculatorPage
+    CalculatorPage,
+    UserLoginModal,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -53,7 +55,8 @@ import {BloodGlucoseLevelColorPipe} from '../pipes/bloodGlucoseLevelColorPipe';
     PacientPage,
     MyInfoPage,
     GraphicsPage,
-    CalculatorPage
+    CalculatorPage,
+    UserLoginModal,
   ],
   providers: [
     PacientService,
