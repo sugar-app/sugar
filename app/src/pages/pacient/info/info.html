@@ -7,7 +7,7 @@
       <h2>Personal info</h2>
     </ion-item>
       <ion-card-content>
-        <form (ngSubmit)="goToMedicalInfo()">
+        <form>
           <ion-item>
             <ion-label>First name</ion-label>
             <ion-input type="text" [(ngModel)]="pacient.firstName" name="firstname"></ion-input>
@@ -50,7 +50,7 @@
       <h2>Medical info</h2>
     </ion-item>
     <ion-card-content>
-      <form (ngSubmit)="savePacient()">
+      <form>
         <ion-item>
           <ion-label>Basal insulin type</ion-label>
           <ion-select [(ngModel)]="pacient.medicalInfo.basalInsulinType" name="basalinsulintype">

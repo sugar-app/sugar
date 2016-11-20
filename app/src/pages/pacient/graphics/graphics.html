@@ -7,7 +7,9 @@
       <h2>Insulin history</h2>
     </ion-item>
       <ion-card-content>
-        <img src="http://canvasjs.com/wp-content/uploads/images/gallery/gallery-overview/javascript-spline-chart.jpg">
+        <div padding>
+          <chart [options]="chartData"></chart>
+        </div>
       </ion-card-content>
   </ion-card>
   <ion-card>
