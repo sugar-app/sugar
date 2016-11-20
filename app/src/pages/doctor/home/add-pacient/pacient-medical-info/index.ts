@@ -56,9 +56,8 @@ export class MedicalInfoPage {
     loader.present();
     this.pacientInfo.medicalInfo = this.medicalInfo;
     this.pacientService.createPacient(this.pacientInfo).subscribe((pacient) => {
-			console.log(pacient);
-			this.navCtrl.push(PacientPage, {pacientId: pacient.id});
       loader.dismiss();
+			this.navCtrl.push(PacientPage, {pacientId: pacient.id});
 		});
   }
 
