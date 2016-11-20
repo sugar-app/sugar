@@ -21,7 +21,7 @@ export class GraphicsPage {
             plotBands: [{ // Light air
                 from: 90,
                 to: 130,
-                color: 'rgba(68, 170, 213, 0.1)',
+                color: 'rgba(50, 170, 50, 0.1)',
                 label: {
                     text: 'Normal values',
                     style: {
