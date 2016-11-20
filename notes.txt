@@ -1,0 +1,17 @@
+1. Chart glicemie - last week, last month, last year, all
+2. HbA1C - all time
+3. Doze pe zi - total
+4. Doze pe zi - neagregat
+5. BMI
+
+-----
+Calculator 
+--- interval normal glicemie - 90-130
+--- daca glicemia initiala e in afara intervalului normal - HIGH atunci atentioneaza ca are nevoie de doza de corectie - si afiseaza doza normala cu Verde si cea de corectie cu Rosu 
+
+Verde           Rosu
+  5U            1.5U
+
+     6.5U (ROSU)
+
+--- daca glicemia initiala e in afara intervalului normal - LOW atunci atentioneaza ca trebuie sa reduca cu 10% si afiseaza valoarea cu Albastru
