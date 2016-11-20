@@ -49,7 +49,8 @@ export class MedicalInfoPage {
 
   savePacient() {
     this.pacientInfo.medicalInfo = this.medicalInfo;
-    this.pacientService.createPacient(this.pacientInfo);
+    console.log(this.pacientInfo);
+    this.pacientService.createPacient(this.pacientInfo).subscribe(console.log, console.error);
     console.log('trying to create');
   }
 
