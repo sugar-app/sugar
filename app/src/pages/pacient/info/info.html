@@ -1,7 +1,8 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-navbar>
     <ion-title>Pacient info</ion-title>
-  </ion-toolbar>
+    <ion-buttons></ion-buttons>
+  </ion-navbar>
 </ion-header>
 <ion-content scrollY="true">
   <ion-card>
@@ -12,6 +13,10 @@
       <h2>Personal info</h2>
     </ion-item>
       <ion-card-content>
+        <ion-item>
+          <ion-label>Pacient id</ion-label>
+          <ion-item>{{pacient.id}}</ion-item>
+        </ion-item>
         <form>
           <ion-item>
             <ion-label>First name</ion-label>
