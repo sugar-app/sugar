@@ -40,7 +40,7 @@ router.post('/', function (req, res) {
   pacient.save().then(function (model) {
     var promises = [];
     if (req.body.medicalInfo && req.body.medicalInfo.basalInsulinType) {
-      let basalInsulinType = new PacientInsulinType({
+      var basalInsulinType = new PacientInsulinType({
         pacient_id: model.id,
         insulin_type_id: req.body.medicalInfo.basalInsulinType.id
       });
@@ -49,7 +49,7 @@ router.post('/', function (req, res) {
     }
 
     if (req.body.medicalInfo && req.body.medicalInfo.bolusInsulinType) {
-      let bolusInsulinType = new PacientInsulinType({
+      var bolusInsulinType = new PacientInsulinType({
         pacient_id: model.id,
         insulin_type_id: req.body.medicalInfo.bolusInsulinType.id
       });
@@ -58,7 +58,7 @@ router.post('/', function (req, res) {
     }
 
     if (req.body.medicalInfo && req.body.medicalInfo.recommendedDailyCarbohydrates) {
-      let recommendedDailyCarbohydrates = new Metric({
+      var recommendedDailyCarbohydrates = new Metric({
         pacient_id: model.id,
         type: 'recommendedDailyCarbohydrates',
         value: req.body.medicalInfo.recommendedDailyCarbohydrates
@@ -68,7 +68,7 @@ router.post('/', function (req, res) {
     }
 
     if (req.body.medicalInfo && req.body.medicalInfo.weight) {
-      let weight = new Metric({
+      var weight = new Metric({
         pacient_id: model.id,
         type: 'weight',
         value: req.body.medicalInfo.weight
@@ -78,7 +78,7 @@ router.post('/', function (req, res) {
     }
 
     if (req.body.medicalInfo && req.body.medicalInfo.height) {
-      let height = new Metric({
+      var height = new Metric({
         pacient_id: model.id,
         type: 'height',
         value: req.body.medicalInfo.height
@@ -88,7 +88,7 @@ router.post('/', function (req, res) {
     }
 
     if (req.body.medicalInfo && req.body.medicalInfo.hemoglobinA1C) {
-      let height = new Metric({
+      var height = new Metric({
         pacient_id: model.id,
         type: 'hemoglobinA1C',
         value: req.body.medicalInfo.hemoglobinA1C
@@ -99,7 +99,7 @@ router.post('/', function (req, res) {
 
     if (req.body.medicalInfo && req.body.medicalInfo.tamponRates) {
       Object.keys(req.body.medicalInfo.tamponRates).forEach((key) => {
-        let data = new TamponRate({
+        var data = new TamponRate({
           pacient_id: model.id,
           dailyMeal: key,
           value: req.body.medicalInfo.tamponRates[key]
@@ -111,7 +111,7 @@ router.post('/', function (req, res) {
 
     if (req.body.medicalInfo && req.body.medicalInfo.correctionRates) {
       Object.keys(req.body.medicalInfo.correctionRates).forEach((key) => {
-        let data = new CorrectionRate({
+        var data = new CorrectionRate({
           pacient_id: model.id,
           dailyMeal: key,
           value: req.body.medicalInfo.correctionRates[key]
