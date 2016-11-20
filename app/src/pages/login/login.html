@@ -4,8 +4,14 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-<div style="text-align: center; margin-top: 70%;">
-  <button ion-button (click)="goToDoctor()"><ion-icon name="contacts" style="margin-right: 10px;"></ion-icon>Doctor</button><br>
-  <button ion-button (click)="goToPacient()"><ion-icon name="contact" style="margin-right: 10px;"></ion-icon>Pacient</button><br>
-</div>
+ <ion-list>
+   <ion-item>
+      <button ion-button icon-left (click)="goToDoctor()"><ion-icon name="contacts"></ion-icon>Doctor</button>
+      <h3>Doctor access to pacient data</h3>
+    </ion-item>
+    <ion-item>
+      <button ion-button icon-left (click)="goToPacient()"><ion-icon name="contact"></ion-icon>Pacient</button>
+      <h3>Pacient access</h3>
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -35,12 +35,12 @@ export class MedicalInfoPage {
   public pacientInfo: Pacient;
 
   public basalInsulinTypes = [
-    {id: 0, genericName: 'Detemir'},
-    {id: 1, genericName: 'Glargin'}
+    {id: 4, genericName: 'Detemir'},
+    {id: 5, genericName: 'Glargin'}
   ];
   public bolusInsulinTypes = [
-    {id: 0, genericName: 'Lispro'},
-    {id: 1, genericName: 'Aspart'}
+    {id: 6, genericName: 'Lispro'},
+    {id: 7, genericName: 'Aspart'}
   ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public pacientService: PacientService) {
