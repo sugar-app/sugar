@@ -8,6 +8,8 @@ import {PacientService} from "../../../services/pacient";
 
 import { AddPacientPage } from './add-pacient';
 
+import { PacientPage } from '../../pacient';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -21,5 +23,9 @@ export class HomePage {
 
   goToAddPacient() {
     this.navCtrl.push(AddPacientPage);
+  }
+
+  goToPacient(id) {
+    this.navCtrl.push(PacientPage, {pacientId: id});
   }
 }
