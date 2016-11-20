@@ -45,7 +45,7 @@ export class PacientService {
         }
 
         return data;
-      });
+      })
       .catch((error: Response | any) => {
         console.log(error);
         let errMsg: string;
@@ -60,6 +60,58 @@ export class PacientService {
 
         return Observable.throw(errMsg);
       });
+  }
+
+  getPacientsById(id : number): Observable<Pacient> {
+    return this.http.get(this.url)
+      .map((res: Response) => {
+        let body = res.json();
+        return body || [];
+      })
+      .map((data) => {
+        data.medicalInfo = {
+          recommendedDailyCarbohydrates: 160,
+          weight: 90,
+          height: 180,
+          hemoglobinA1C: 0.075,
+          tamponRates: {
+            1: 33,
+            2: 21,
+            3: 55
+          },
+          correctionRates: {
+            1: 10,
+            2: 15,
+            3: 20
+          },
+          insulinType: {
+            genericName: 'Bolus',
+            brandName: 'Insulin',
+            manufacturer: 'PastilaDotCom',
+            form: 1,
+            delivery: 'shot',
+            onset: 10,
+            peak: 50,
+            duration: 180
+          }
+        }
+
+        return data;
+      })
+      .catch((error: Response | any) => {
+        console.log(error);
+        let errMsg: string;
+
+        if (error instanceof Response) {
+          const body = error.json() || '';
+          const err = body.error || JSON.stringify(body);
+          errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
+        } else {
+          errMsg = error.message ? error.message : error.toString();
+        }
+
+        return Observable.throw(errMsg);
+      }).first();
   }
 
   createPacient(pacient: Pacient): Observable<Pacient> {

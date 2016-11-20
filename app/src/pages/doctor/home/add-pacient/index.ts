@@ -1,5 +1,7 @@
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { Component } from '@angular/core';
+
+import { MedicalInfoPage } from './pacient-medical-info';
 
 import { Pacient } from '../../../../interfaces/pacient';
 import { Gender } from '../../../../interfaces/gender';
@@ -18,13 +20,14 @@ export class AddPacientPage {
     diagnosticDate: undefined,
     diabetesType: undefined
   };
+  public addMedicalInfo: boolean = false;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
 
-  goToInsulinType() {
-    console.log(this.pacient);
+  goToMedicalInfo() {
+    this.navCtrl.push(MedicalInfoPage, {pacientInfo: this.pacient});
   }
 
 }

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Calculator</ion-title>
+    <ion-buttons end>
+        <button ion-button (click)="calculateStatistics()">
+            <ion-icon name="checkmark"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>Meal</ion-label>
+            <ion-select [(ngModel)]="calculatorInput.dailyMeal" name="dailyMeal">
+                <ion-option *ngFor="let meal of dailyMeals" [value]="meal.id">{{meal.genericName}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Blood Glucose Level</ion-label>
+            <ion-input type="number" [(ngModel)]="calculatorInput.bloodGlucoseLevel">
+            </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Carbohydrates (g)</ion-label>
+            <ion-input type="number" [(ngModel)]="calculatorInput.carbohydrates"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Proteins and Fats (kCal)</ion-label>
+            <ion-input type="number" [(ngModel)]="calculatorInput.kilocalories"></ion-input>
+        </ion-item>
+    </ion-list>
+</ion-content>

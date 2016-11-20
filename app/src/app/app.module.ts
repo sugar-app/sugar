@@ -10,6 +10,13 @@ import { ChildPage } from '../pages/doctor/about/child';
 import { AddPacientPage } from '../pages/doctor/home/add-pacient';
 import {GenderIconPipe} from "../pipes/genderIconPipe";
 import { PacientService } from '../services/pacient';
+import { MedicalInfoPage } from '../pages/doctor/home/add-pacient/pacient-medical-info';
+import {PacientPage} from '../pages/pacient';
+import {MyInfoPage} from '../pages/pacient/info/info';
+import {GraphicsPage} from '../pages/pacient/graphics/graphics';
+import {CalculatorPage} from '../pages/pacient/calculator/calculator';
+import {CalculatorService} from '../services/calculator';
+import {BloodGlucoseLevelColorPipe} from '../pipes/bloodGlucoseLevelColorPipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +28,13 @@ import { PacientService } from '../services/pacient';
     DoctorPage,
     ChildPage,
     AddPacientPage,
-    GenderIconPipe
+    GenderIconPipe,
+    BloodGlucoseLevelColorPipe,
+    MedicalInfoPage,
+    PacientPage,
+    MyInfoPage,
+    GraphicsPage,
+    CalculatorPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -35,10 +48,16 @@ import { PacientService } from '../services/pacient';
     LoginPage,
     DoctorPage,
     ChildPage,
-    AddPacientPage
+    AddPacientPage,
+    MedicalInfoPage,
+    PacientPage,
+    MyInfoPage,
+    GraphicsPage,
+    CalculatorPage
   ],
   providers: [
     PacientService,
+    CalculatorService,
   ]
 })
 export class AppModule {}
