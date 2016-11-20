@@ -23,7 +23,7 @@ var Pacient = db.Model.extend({
       tamponRates: {},
       correctionRates: {}
     };
-    let latestPacientInsulinType = this.relations.insulinTypes.models.pop();
+    var latestPacientInsulinType = this.relations.insulinTypes.models.pop();
 
     if (latestPacientInsulinType) {
       medicalInfo.insulinType = latestPacientInsulinType.relations.insulinType.attributes;
