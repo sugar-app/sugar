@@ -1,14 +1,5 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Calculator</ion-title>
-    <ion-buttons end>
-        <button ion-button (click)="calculateStatistics()">
-            <ion-icon name="checkmark"></ion-icon>
-        </button>
-    </ion-buttons>
-  </ion-navbar>
-</ion-header>
 <ion-content>
+  <div padding>
     <ion-list>
         <ion-item>
             <ion-label>Meal</ion-label>
@@ -46,4 +37,6 @@
       <ion-card-header>Total units</ion-card-header>
       <ion-item>{{total.toFixed(2)}}</ion-item>
     </ion-card>
+    <button ion-button block (click)="calculateStatistics()">Calculate</button>
+  </div>
 </ion-content>

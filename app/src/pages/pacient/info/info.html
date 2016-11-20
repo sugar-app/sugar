@@ -1,9 +1,3 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Pacient info</ion-title>
-    <ion-buttons></ion-buttons>
-  </ion-navbar>
-</ion-header>
 <ion-content scrollY="true">
   <ion-card>
     <ion-item>
@@ -15,20 +9,20 @@
       <ion-card-content>
         <ion-item>
           <ion-label>Pacient id</ion-label>
-          <ion-item>{{pacient.id}}</ion-item>
+          <ion-input readonly type="text" [(ngModel)]="pacient.id" name="pacientid"></ion-input>
         </ion-item>
         <form>
           <ion-item>
             <ion-label>First name</ion-label>
-            <ion-input type="text" [(ngModel)]="pacient.firstName" name="firstname"></ion-input>
+            <ion-input readonly type="text" [(ngModel)]="pacient.firstName" name="firstname"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Last name</ion-label>
-            <ion-input type="text" [(ngModel)]="pacient.lastName" name="lastname"></ion-input>
+            <ion-input readonly type="text" [(ngModel)]="pacient.lastName" name="lastname"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Birth date</ion-label>
-            <ion-datetime displayFormat="D/M/YY" pickerFormat="D MMMM YYYY" [(ngModel)]="pacient.birthDay" name="birthdate"></ion-datetime>
+            <ion-datetime readonly displayFormat="D/M/YY" pickerFormat="D MMMM YYYY" [(ngModel)]="pacient.birthDay" name="birthdate"></ion-datetime>
           </ion-item>
           <ion-item>
             <ion-label>Gender</ion-label>
@@ -40,11 +34,11 @@
           </ion-item>
           <ion-item>
             <ion-label>Diagnostic date</ion-label>
-            <ion-datetime displayFormat="D/M/YY" pickerFormat="D MMMM YYYY" [(ngModel)]="pacient.diagnosticDate" name="diagnosticdate"></ion-datetime>
+            <ion-datetime readonly displayFormat="D/M/YY" pickerFormat="D MMMM YYYY" [(ngModel)]="pacient.diagnosticDate" name="diagnosticdate"></ion-datetime>
           </ion-item>
           <ion-item>
             <ion-label>Diabetes type</ion-label>
-            <ion-select [(ngModel)]="pacient.diabetesType" name="diabetestype">
+            <ion-select readonly [(ngModel)]="pacient.diabetesType" name="diabetestype">
               <ion-option value="1">Type 1</ion-option>
               <ion-option value="2">Type 2</ion-option>
             </ion-select>
@@ -75,48 +69,48 @@
         </ion-item>
         <ion-item>
           <ion-label>Recommended daily carbohydrates</ion-label>
-          <ion-input type="number" [(ngModel)]="pacient.medicalInfo.recommendedDailyCarbohydrates" name="dailycarbo"></ion-input>
+          <ion-input readonly type="number" [(ngModel)]="pacient.medicalInfo.recommendedDailyCarbohydrates" name="dailycarbo"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Weight (Kg)</ion-label>
-          <ion-input type="number" [(ngModel)]="pacient.medicalInfo.weight" name="weight"></ion-input>
+          <ion-input readonly type="number" [(ngModel)]="pacient.medicalInfo.weight" name="weight"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Height </ion-label>
-          <ion-input type="number" [(ngModel)]="pacient.medicalInfo.height" name="height"></ion-input>
+          <ion-input readonly type="number" [(ngModel)]="pacient.medicalInfo.height" name="height"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Hemoglobin A1C</ion-label>
-          <ion-input type="number" [(ngModel)]="pacient.medicalInfo.hemoglobinA1C" name="hemoglobin"></ion-input>
+          <ion-input readonly type="number" [(ngModel)]="pacient.medicalInfo.hemoglobinA1C" name="hemoglobin"></ion-input>
         </ion-item>
         <ion-list>
           <ion-list-header style="color: black">Tampon rates:</ion-list-header>
           <ion-item>
             <ion-label>First</ion-label>
-            <ion-input type="number" [(ngModel)]="pacient.medicalInfo.tamponRates[1]" name="tampfirst"></ion-input>
+            <ion-input readonly type="number" [(ngModel)]="pacient.medicalInfo.tamponRates[1]" name="tampfirst"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Second</ion-label>
-            <ion-input type="number" [(ngModel)]="pacient.medicalInfo.tamponRates[2]" name="tampsecond"></ion-input>
+            <ion-input readonly type="number" [(ngModel)]="pacient.medicalInfo.tamponRates[2]" name="tampsecond"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Third</ion-label>
-            <ion-input type="number" [(ngModel)]="pacient.medicalInfo.tamponRates[3]" name="tampthird"></ion-input>
+            <ion-input readonly type="number" [(ngModel)]="pacient.medicalInfo.tamponRates[3]" name="tampthird"></ion-input>
           </ion-item>
         </ion-list>
         <ion-list style="padding-top: 5px;">
           <ion-list-header style="color:black;">Correction rates:</ion-list-header>
           <ion-item>
             <ion-label>First</ion-label>
-            <ion-input type="number" [(ngModel)]="pacient.medicalInfo.correctionRates[1]" name="correctionfirst"></ion-input>
+            <ion-input readonly type="number" [(ngModel)]="pacient.medicalInfo.correctionRates[1]" name="correctionfirst"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Second</ion-label>
-            <ion-input type="number" [(ngModel)]="pacient.medicalInfo.correctionRates[2]" name="correctionsecond"></ion-input>
+            <ion-input readonly type="number" [(ngModel)]="pacient.medicalInfo.correctionRates[2]" name="correctionsecond"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Third</ion-label>
-            <ion-input type="number" [(ngModel)]="pacient.medicalInfo.correctionRates[3]" name="correctionthird"></ion-input>
+            <ion-input readonly type="number" [(ngModel)]="pacient.medicalInfo.correctionRates[3]" name="correctionthird"></ion-input>
           </ion-item>
         </ion-list>
       </form>

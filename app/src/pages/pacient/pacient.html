@@ -1,5 +1,12 @@
-<ion-tabs>
-  <ion-tab [root]="tab1Root" tabTitle="My info" tabIcon="information-circle" [rootParams]="pacient"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="Calculator" tabIcon="calculator" [rootParams]="pacient"></ion-tab>
-  <ion-tab [root]="tab3Root" tabTitle="Charts" tabIcon="analytics" [rootParams]="pacient"></ion-tab>
-</ion-tabs>
+<ion-header>
+  <ion-navbar>
+    <ion-title>Pacient info</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-tabs>
+    <ion-tab [root]="tab1Root" tabTitle="My info" tabIcon="information-circle" [rootParams]="pacient"></ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="Calculator" tabIcon="calculator" [rootParams]="pacient"></ion-tab>
+    <ion-tab [root]="tab3Root" tabTitle="Charts" tabIcon="analytics" [rootParams]="pacient"></ion-tab>
+  </ion-tabs>
+</ion-content>
