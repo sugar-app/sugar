@@ -7,9 +7,15 @@
       <h2>Insulin history</h2>
     </ion-item>
       <ion-card-content>
-        <div padding>
-          <chart [options]="chartData"></chart>
-        </div>
+        <ion-grid>
+          <ion-row wrap>
+            <ion-col>
+              <div>
+                <chart [options]="chartData"></chart>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-card-content>
   </ion-card>
   <ion-card>
