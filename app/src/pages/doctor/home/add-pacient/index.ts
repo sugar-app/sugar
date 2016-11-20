@@ -27,7 +27,8 @@ export class AddPacientPage {
   }
 
   goToMedicalInfo() {
-    this.navCtrl.push(MedicalInfoPage, {pacientInfo: this.pacient});
+    var data = {pacientInfo: this.pacient}
+    this.navCtrl.push(MedicalInfoPage, data);
   }
 
 }
