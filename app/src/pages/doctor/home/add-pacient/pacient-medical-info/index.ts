@@ -1,9 +1,9 @@
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { Component } from '@angular/core';
 
 import { PacientMedicalInfo } from '../../../../../interfaces/pacientMedicalInfo';
-import { InsulinType } from '../../../../interfaces/insulinType';
 import { Pacient } from '../../../../../interfaces/pacient';
+import { PacientPage } from '../../../../pacient';
 
 import { PacientService } from '../../../../../services/pacient';
 
@@ -43,15 +43,16 @@ export class MedicalInfoPage {
     {id: 7, genericName: 'Aspart'}
   ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public pacientService: PacientService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pacientService: PacientService, public loadingCtrl: LoadingController) {
     this.pacientInfo = navParams.get('pacientInfo');
   }
 
   savePacient() {
     this.pacientInfo.medicalInfo = this.medicalInfo;
-    console.log(this.pacientInfo);
-    this.pacientService.createPacient(this.pacientInfo).subscribe(console.log, console.error);
-    console.log('trying to create');
+    this.pacientService.createPacient(this.pacientInfo).subscribe((pacient) => {
+			console.log(pacient);
+			this.navCtrl.push(PacientPage, {pacientId: pacient.id});
+		});
   }
 
 }

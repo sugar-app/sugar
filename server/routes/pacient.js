@@ -42,24 +42,6 @@ router.post('/', function (req, res) {
   var pacient = new Pacient(newPacient);
   pacient.save().then(function (model) {
     var promises = [];
-    if (req.body.medicalInfo && req.body.medicalInfo.basalInsulinType) {
-      var basalInsulinType = new PacientInsulinType({
-        pacient_id: model.id,
-        insulin_type_id: req.body.medicalInfo.basalInsulinType.id
-      });
-
-      promises.push(basalInsulinType.save());
-    }
-
-    if (req.body.medicalInfo && req.body.medicalInfo.bolusInsulinType) {
-      var bolusInsulinType = new PacientInsulinType({
-        pacient_id: model.id,
-        insulin_type_id: req.body.medicalInfo.bolusInsulinType.id
-      });
-
-      promises.push(bolusInsulinType.save());
-    }
-
     if (req.body.medicalInfo && req.body.medicalInfo.recommendedDailyCarbohydrates) {
       var recommendedDailyCarbohydrates = new Metric({
         pacient_id: model.id,
