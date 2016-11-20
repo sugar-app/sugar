@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
+import { ChartModule } from 'angular2-highcharts';
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/doctor/about/about';
 import { ContactPage } from '../pages/doctor/contact/contact';
@@ -39,7 +40,8 @@ import { UserLoginModal } from '../modals/user-login';
     UserLoginModal,
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ChartModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
