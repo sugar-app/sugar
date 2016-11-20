@@ -21,6 +21,7 @@
             <ion-input type="number" [(ngModel)]="calculatorInput.kilocalories"></ion-input>
         </ion-item>
     </ion-list>
+    <button ion-button block (click)="calculateStatistics()">Calculate</button>
     <ion-card *ngIf="loaded">
       <ion-card-header>Carbohydrates units</ion-card-header>
       <ion-item>{{calcOut.carbohydratesUnits.toFixed(2)}}</ion-item>
@@ -37,6 +38,5 @@
       <ion-card-header>Total units</ion-card-header>
       <ion-item>{{total.toFixed(2)}}</ion-item>
     </ion-card>
-    <button ion-button block (click)="calculateStatistics()">Calculate</button>
   </div>
 </ion-content>
